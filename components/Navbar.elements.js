@@ -1,0 +1,155 @@
+
+import styled from "styled-components";
+import { FaRocketchat} from "react-icons/fa";
+import { Container } from "./../styles/global";
+
+export const Nav = styled.nav`
+  background: white;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+`;
+
+export const NavbarContainer = styled(Container)`
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  ${Container}
+`;
+
+export const NavLogo = styled.a`
+  justify-self: flex-start;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 960px) {
+    margin: 0 auto;
+  }
+`;
+
+export const NavIcon = styled(FaRocketchat)`
+  margin-right: 0.8rem;
+  color: #74c947;
+  font-size: 2rem;
+`;
+
+export const NavTitle = styled.h1`
+  color: #74c947;
+  font-size: 2rem;
+`;
+
+export const MobileIcon = styled.div`
+  display: none;
+  @media screen and (max-width: 960px) {
+    color: #191919;
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+`;
+
+export const NavMenu = styled.ul`
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  @media screen and (max-width: 960px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 110px;
+    left: ${({ click }) => (click ? 0 : "-100%")};
+    opacity: 1;
+    transition: all 0.5s ease;
+    background: #171717;
+  }
+`;
+
+export const NavItem = styled.li`
+  height: 80px;
+  border-bottom: 2px solid transparent;
+  &:hover {
+    border-bottom: 2px solid white;
+  }
+  @media screen and (max-width: 960px) {
+    width: 100%;
+    &:hover {
+      border: none;
+    }
+  }
+`;
+
+export const NavLinks = styled.a`
+  font-weight: 600;
+  color: #191919;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  @media screen and (max-width: 960px) {
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+    &:hover {
+      cursor: pointer;
+      color: #74c947;
+      transition: all 0.3s ease;
+    }
+  }
+`;
+
+export const NavButton = styled.button`
+  border-radius: 50px;
+  background: #74c947;
+  white-space: nowrap;
+  padding: 20px 30px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    transition: all 0.3s ease-in;
+    background: #66b83b;
+  }
+  @media screen and (max-width: 960px) {
+    padding: 12px 64px;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+`;
+
+export const NavItemButton = styled.li`
+  @media screen and (max-width: 960px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+export const NavButtonLink = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 8px 16px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+`;
